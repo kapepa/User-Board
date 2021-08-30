@@ -1,0 +1,23 @@
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-layout{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  &__header{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__body{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

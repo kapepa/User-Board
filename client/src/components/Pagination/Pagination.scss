@@ -1,0 +1,61 @@
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__place{
+
+  }
+  &__page-select{
+    display: flex;
+  }
+  &__page-area{
+    width: 17px;
+    cursor: pointer;
+    margin: 0 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+  &__page--active, &__page-area--active{
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: #000;
+      border-radius: 2px;
+    }
+  }
+  &__page-backward-btn, &__page-forward-btn{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    &::before{
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__page-backward-btn{
+    &::before{
+      border-right: 14px solid darkgoldenrod;
+    }
+  }
+  &__page-forward-btn{
+    &::before{
+      border-left: 14px solid darkgoldenrod;
+    }
+  }
+}
